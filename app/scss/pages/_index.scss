@@ -1,0 +1,74 @@
+//color
+$primary-blue: #1d8ae4;
+$primary-light-blue: #dbe7ea;
+$primary-black: #333333;
+$primary-grey: #d0d0d0;
+$primary-light-grey: #f3f7f8;
+
+//fonts
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../fonts/RobotoMedium.ttf);
+}
+
+//title
+.title-wrap {
+    height: 100%;
+    background: $primary-blue;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.24);
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+    .back-icon {
+        width: 55px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0; 
+        background: none;
+        border: 0;
+        outline: none;
+        padding: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .title {
+        color: white;
+        font-size: 24px;
+        padding-left: 70px;
+        margin-bottom: 0;
+        line-height: 55px;
+    }
+}
+
+
+//content
+.content {
+    background: $primary-light-grey;
+    min-height: calc(100vh - 85px);
+    .list-item {
+        padding: 15px 20px 15px 70px;
+        font-size: 18px;
+        color: $primary-black;
+        background: white;
+        border-bottom: 1px solid $primary-grey;
+        border-left: 5px solid white;
+        position: relative;
+        line-height: 1em;
+        &:before {
+            content: '';
+            width: 14px;
+            height: 22px;
+            background: url(../img/iconBtlist.png) 0 0/100% no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        &:active {
+            background: $primary-light-blue;
+            border-left-color: $primary-blue;
+        }
+    }
+}
