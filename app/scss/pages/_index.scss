@@ -13,11 +13,13 @@ $primary-light-grey: #f3f7f8;
 
 //title
 .title-wrap {
-    height: 100%;
+    width: 100%;
     background: $primary-blue;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.24);
     padding-top: 30px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
     .back-icon {
         width: 55px;
@@ -45,8 +47,12 @@ $primary-light-grey: #f3f7f8;
 
 //content
 .content {
+    width: 100%;
     background: $primary-light-grey;
-    min-height: calc(100vh - 85px);
+    height: calc(100vh - 85px);
+    position: absolute;
+    top: 85px;
+    left: 0;
     .list-item {
         padding: 15px 20px 15px 70px;
         font-size: 18px;
